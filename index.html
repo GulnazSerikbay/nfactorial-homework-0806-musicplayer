@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>n! LIVE Player</title>
+  </head>
+
+  <body>
+    <div class = "container" id = "container">
+    <div class = "header">
+    <h1>n! LIVE</h1>
+    <button id = 'btn-change-bg' onclick = "playVideo()">
+      <i class = "fa fa-music" style = "color: white; padding: 2px"></i>
+    </button>
+  </div>
+
+  <div class = "center">
+    <div>
+      <div class = "playpause-track" id = "playpause-track" onclick = "playPauseTrack">
+      <i class = "fa fa-play-circle fa-3x"></i>
+    </div>
+    <audio src="audios/aud.mp3" id = "audio"></audio>
+    </div>
+
+  </div>
+</div>
+</div>
+  <script src="script.js"></script>
+  </body>
+  
+</html>
