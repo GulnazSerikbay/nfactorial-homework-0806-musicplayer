@@ -127,3 +127,46 @@ nextBtn.addEventListener('click', toNext)
 audio.addEventListener('timeupdate', setProgress)
 progressContainer.addEventListener('click', goProgress)
 audio.addEventListener('ended', toNext)
+
+//dark mode:
+const darkBtn = document.getElementById('dark-btn');
+//const theme = document.getElementById("theme");
+const darkMode = localStorage.getItem("dark-mode")
+
+const lightBtn = document.getElementById('light-btn');
+const cookieBtn = document.getElementById('cookie-btn')
+
+cookieBtn.addEventListener('click', () => {
+    document.cookie = "domashka=done; expires=Wed, 15 Jun 2022 12:00:00 GMT";
+})
+
+const toDark = () => {  
+    document.documentElement.setAttribute("data-theme", "dark")
+    localStorage.setItem("dark-mode", "enabled")
+}
+
+const toLight = ()=>{
+    localStorage.setItem("dark-mode", "disabled")
+    document.documentElement.setAttribute("data-theme", "light") 
+}
+
+if (darkMode === "enabled") {
+    toDark(); // set state of darkMode on page load
+
+}
+
+if (darkMode === "disabled") {
+    toLight(); // set state of darkMode on page load
+    document.body.style.backgroundColor = "pink !important";  
+}
+
+
+
+darkBtn.addEventListener("click", (e)=> {
+    toDark()
+})
+
+lightBtn.addEventListener("click", (e)=> {
+    toLight()
+})
+

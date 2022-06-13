@@ -1,0 +1,23 @@
+{
+  "name": "nfactorial-homework-0806-musicplayer",
+  "version": "1.0.0",
+  "description": "Music Player using JavaScript",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "git push -u origin master",
+    "add": "git add .",
+    "commit": "git commit -m 'new commit'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GulnazSerikbay/nfactorial-homework-0806-musicplayer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GulnazSerikbay/nfactorial-homework-0806-musicplayer/issues"
+  },
+  "homepage": "https://github.com/GulnazSerikbay/nfactorial-homework-0806-musicplayer#readme"
+}

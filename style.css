@@ -3,13 +3,26 @@
 * {
   box-sizing: border-box;
 }
+html[data-theme='light']{
+  --bg: pink;
+  --bg-panel: #ebebeb;
+  --color-heading: rgb(27, 168, 14);
+  --color-text: #333333;
+}
+
+html[data-theme='dark'] {
+  --bg: #333333;
+  --bg-panel: #434343;
+  --color-heading: #0077ff;
+  --color-text: #B5B5B5;
+}
+
+h1 {
+  color: var(--color-heading);
+}
 
 body {
-  background-image: linear-gradient(
-    0deg,
-    rgba(247, 247, 247, 1) 23.8%,
-    rgba(252, 221, 221, 1) 92%
-  );
+  background-color: var(--bg);
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,13 +33,14 @@ body {
 }
 
 .music-container {
-  background-color: #fff;
+  width: 96%;
+  background-color: white;
   border-radius: 15px;
   box-shadow: 0 20px 20px 0 rgba(252, 169, 169, 0.6);
   display: flex;
   padding: 20px 30px;
   position: relative;
-  margin: 85px 0;
+  margin: 70px 0;
   z-index: 10;
 }
 
@@ -36,11 +50,12 @@ body {
 }
 
 .container{
-    height:60vh;
+    height:55vh;
+    width: 80%;
     display:flex;
     align-items:center;
     justify-content:center;
-
+    color: var(--color-text);
     margin: 0;
     padding: 0;
 }
@@ -156,6 +171,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 1;
+ 
 }
 
 .action-btn {
@@ -232,6 +248,9 @@ body {
     position: relative;
     z-index: 2;
     transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #icons2{
+    justify-content: center;
   }
   .icons_container .icon span{
     display: flex;
@@ -311,4 +330,33 @@ body {
   .icons_container .sound5:hover .tooltip,
   .icons_container .sound5:hover .tooltip:before{
     background: #DE463B;
+  }
+
+  .col {
+    justify-content: center;
+  }
+
+  #dark-btn {
+    padding: 0.5em;
+    font-weight: 800;
+  }
+  
+  #dark-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .dark-mode-toggle {
+    background: #000;
+    color: #fff;
+  }
+  
+  #theme {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .dark-mode-theme {
+    background: #000;
+    color: #fff;
   }
